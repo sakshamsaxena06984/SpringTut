@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--   using constructor calling in bean-->
+
+    <!--    <bean class="com.ci.Person1" name="person1">-->
+    <!--        <constructor-arg>-->
+    <!--            <value>Saksham</value>-->
+    <!--        </constructor-arg>-->
+    <!--        <constructor-arg value="123" type="int"/>-->
+    <!--    </bean>-->
+    <bean class="com.ci.Certi" name="refc">
+        <constructor-arg value="Android"/>
+    </bean>
+    <bean class="com.ci.Person1" name="person1">
+        <constructor-arg value="Saksham"/>
+        <constructor-arg value="332"/>
+        <constructor-arg ref="refc"/>
+    </bean>
+
+    <!--    will use c: schema-->
+    <!--    note: p-schema use for properties-->
+    <!--    note: c-schema use for constructor-->
+
+<!--    Note : c-schema working will see after some time-->
+    <bean class="com.ci.Addition" name="addition1">
+       <constructor-arg value="12" type="double"/>
+        <constructor-arg value="32" type="double"/>
+    </bean>
+
+<!--    using index -->
+    <bean class="com.ci.Addition" name="addition2">
+        <constructor-arg value="21" type="int" index="1"/>
+        <constructor-arg value="23" type="int" index="0"/>
+    </bean>
+
+</beans>
