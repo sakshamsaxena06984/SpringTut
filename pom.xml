@@ -13,8 +13,6 @@
         <module>spring-orm-jdbc</module>
         <module>spring-mvc</module>
         <module>spring-mvc-1</module>
-        <module>spring-mvc-2</module>
-        <module>spring-mvc-2</module>
         <module>spring-mvc-3</module>
     </modules>
 
@@ -24,7 +22,6 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
         <dependency>
             <groupId>org.springframework</groupId>
